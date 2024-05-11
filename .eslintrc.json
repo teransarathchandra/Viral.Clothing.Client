@@ -1,0 +1,131 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "react", "import", "jsx-a11y"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/no-unescaped-entities": "off",
+    "import/no-anonymous-default-export": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": [
+      "error",
+      {
+        "ignoreRestArgs": true
+      }
+    ],
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "lines-around-comment": [
+      "error",
+      {
+        "beforeLineComment": true,
+        "allowBlockStart": true,
+        "allowObjectStart": true
+      }
+    ],
+    "newline-before-return": "error",
+    "import/newline-after-import": [
+      "error",
+      {
+        "count": 1
+      }
+    ],
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
+      }
+    ],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "variableLike",
+        "format": ["camelCase", "PascalCase", "UPPER_CASE"]
+      },
+      {
+        "selector": "typeLike",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "function",
+        "format": ["camelCase", "PascalCase"]
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-console": [
+      "warn",
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+    "eqeqeq": ["error", "smart"],
+    "default-case": "error",
+    "no-alert": "error",
+    "no-else-return": "error",
+    "react/jsx-key": "error",
+    "react/prop-types": "off",
+    "react/self-closing-comp": "error",
+    "no-var": "error", // Use `const` and `let` for better variable scoping
+    "prefer-const": "error", // Encourage immutability
+    "no-param-reassign": "error", // Avoid mutating function parameters
+    "no-nested-ternary": "error", // Prefer simpler conditional expressions for readability
+    "complexity": ["warn", 10], // Limit function complexity for maintainability
+    "max-depth": ["warn", 4], // Limit nesting depth for readability
+    "no-unneeded-ternary": "error", // Simplify unnecessary ternary expressions
+    // "arrow-body-style": ["error", "as-needed"], // Enforce concise arrow function syntax
+
+    // React-Specific Best Practices
+    // "react/jsx-no-bind": "error", // Avoid binding in render for performance
+    "react/jsx-no-bind": "off",
+    "react/jsx-pascal-case": "error", // Use PascalCase for component names
+    "react/jsx-sort-props": "error", // Maintain consistent prop order
+    "react/no-array-index-key": "error", // Prevent using array index as keys
+    "react/no-unused-state": "error", // Remove unused state variables
+    "react/jsx-props-no-spreading": "off", // Allow prop spreading for flexibility
+    "react/jsx-fragments": ["error", "syntax"], // Use short syntax for fragments
+
+    // Accessibility (a11y)
+    "jsx-a11y/alt-text": "error", // Ensure images have alt text
+    "jsx-a11y/anchor-is-valid": "error", // Validate anchor tags
+    "jsx-a11y/click-events-have-key-events": "error", // Ensure keyboard accessibility for click events
+
+    // Import Best Practices
+    // "import/order": [
+    //   "error",
+    //   {
+    //     "groups": ["builtin", "external", "internal"],
+    //     "pathGroups": [
+    //       { "pattern": "react", "group": "external", "position": "before" }
+    //     ],
+    //     "newlines-between": "always",
+    //     "alphabetize": { "order": "asc", "caseInsensitive": true }
+    //   }
+    // ],
+    "import/order": "off",
+    // "import/no-cycle": "error", // Prevent circular dependencies
+    "import/no-cycle": "off",
+    // "import/no-duplicates": "error" // Avoid duplicate imports
+    "import/no-duplicates": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
+    }
+  }
+}
