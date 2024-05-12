@@ -12,8 +12,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "framer-motion": "^11.1.9",
+    "ldrs": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-lazy-load-image-component": "^1.6.0",
     "react-router-dom": "^6.23.1",
     "styled-components": "^6.1.11",
     "vite-tsconfig-paths": "^4.3.2"
