@@ -31,13 +31,16 @@ export const ImageGrid = styled.div`
 
 export const ImageContainer = styled(motion.div)`
   overflow: hidden;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #e6e6e6;
   border-radius: 8px;
-  width: 600px;  // Fixed width
-  height: 600px; // Fixed height
+  width: 600px;
+  height: 600px;
 
   &:hover {
     img {
-      transform: scale(1.1); // Zoom on hover
+      transform: scale(1.1);
     }
   }
 `;
@@ -46,5 +49,5 @@ export const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease-in-out; // Smooth transition for hover effect
+  transition: transform 0.3s ease-in-out;
 `;

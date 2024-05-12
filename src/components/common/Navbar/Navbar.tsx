@@ -6,11 +6,9 @@ import {
   NavIcons,
   NavIcon,
 } from "@styles/NavbarStyles";
-import {
-  faMagnifyingGlass,
-  faCircleUser,
-  faCartShopping,
-} from "@fortawesome/free-solid-svg-icons";
+import { CiSearch } from "react-icons/ci";
+import { CiUser } from "react-icons/ci";
+import { CiShoppingCart } from "react-icons/ci";
 
 const Navbar = () => {
   return (
@@ -23,9 +21,15 @@ const Navbar = () => {
       </NavLinks>
       <NavLinks>
         <NavIcons>
-          <NavIcon icon={faMagnifyingGlass} />
-          <NavIcon icon={faCircleUser} />
-          <NavIcon icon={faCartShopping} />
+          <NavIcon value={{ size: '24px', style: { margin: "0 10px", cursor: "pointer" } }}>
+            <CiSearch />
+          </NavIcon>
+          <NavIcon value={{ size: '24px', style: { margin: "0 10px", cursor: "pointer" } }}>
+            <CiUser />
+          </NavIcon>
+          <NavIcon value={{ size: '24px', style: { margin: "0 10px", cursor: "pointer" } }}>
+            <CiShoppingCart />
+          </NavIcon>
         </NavIcons>
       </NavLinks>
     </Nav>

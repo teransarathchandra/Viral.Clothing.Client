@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconContext, IconBaseProps } from "react-icons";
 
 export const Nav = styled.nav`
   background: #121212;
@@ -60,14 +60,9 @@ export const NavIcons = styled.div`
   align-items: center;
 `;
 
-export const NavIcon = styled(FontAwesomeIcon)`
-  opacity: .8;
-  margin-left: 25px;
-  font-size: 20px;
-  color: #ffffff;
-  cursor: pointer;
+interface NavIconProps extends IconBaseProps {
+  size?: string;
+}
 
-  &:hover {
-    opacity: 1;
-  }
+export const NavIcon = styled(IconContext.Provider) <NavIconProps>`
 `;
