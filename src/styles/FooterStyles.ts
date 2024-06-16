@@ -4,6 +4,7 @@ export const FooterContainer = styled.footer`
     background-color: #111111;
     color: #ffffff;
     padding: 3rem 7rem;
+    margin-top: 5rem;
 `;
 
 export const FooterColumns = styled.div`
