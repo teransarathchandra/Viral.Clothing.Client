@@ -11,6 +11,7 @@ import {
 import { useState } from "react";
 import { CiSearch, CiUser, CiShoppingCart, CiMenuBurger } from 'react-icons/ci';
 import { TfiClose } from "react-icons/tfi";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -18,6 +19,13 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const navigate = useNavigate();
+
+  const handleUserIconClick = () => {
+    debugger;
+    navigate('/account');
   };
 
   return (
@@ -30,13 +38,13 @@ const Navbar = () => {
       </NavLinks>
       <NavLinks>
         <NavIcons>
-          <NavIcon value={{ size: '25px', style: { margin: '0 10px', cursor: 'pointer' } }}>
+          <NavIcon value={{ size: '25px', style: { margin: '0 10px', cursor: 'pointer', color: '#ffffff' } }}>
             <CiSearch />
           </NavIcon>
-          <NavIcon value={{ size: '25px', style: { margin: '0 10px', cursor: 'pointer' } }}>
-            <CiUser />
+          <NavIcon value={{ size: '25px', style: { margin: '0 10px', cursor: 'pointer', color: '#ffffff' } }}>
+            <CiUser onClick={handleUserIconClick} />
           </NavIcon>
-          <NavIcon value={{ size: '25px', style: { margin: '0 10px', cursor: 'pointer' } }}>
+          <NavIcon value={{ size: '25px', style: { margin: '0 10px', cursor: 'pointer', color: '#ffffff' } }}>
             <CiShoppingCart />
           </NavIcon>
         </NavIcons>

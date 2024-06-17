@@ -2,6 +2,7 @@ import { Route } from "@interfaces/Route";
 import { lazy } from "react";
 
 const Home = lazy(() => import("@pages/Home"));
+const Account = lazy(() => import("@pages/Account"));
 
 export const privateRoutes: Route[] = [
     {
@@ -28,6 +29,12 @@ export const publicRoutes: Route[] = [
     {
         path: "/home",
         component: Home,
+        isPrivate: false,
+        forEmployeeOnly: false,
+    },
+    {
+        path: "/account",
+        component: Account,
         isPrivate: false,
         forEmployeeOnly: false,
     }

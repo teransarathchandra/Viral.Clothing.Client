@@ -75,6 +75,8 @@ export const QuickAddButton = styled.button`
 
 export const H1 = styled.h1`
   color: #000000;
+  font-size: 2rem;
+  font-weight: 700;
   margin: 2rem 3rem 1rem 3rem;
   padding: 0 10px;
 `;
@@ -113,6 +115,7 @@ export const LatestDropHeading = styled.h1`
   color: #ffffff;
   margin: 0 2rem;
   font-size: 2.6rem;
+  font-weight: 700;
 `;
 
 export const ShopButton = styled.button`
