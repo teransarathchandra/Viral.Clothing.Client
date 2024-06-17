@@ -3,23 +3,9 @@ import { lazy } from "react";
 
 const Home = lazy(() => import("@pages/Home"));
 const Account = lazy(() => import("@pages/Account"));
+const Mens = lazy(() => import("@pages/Mens"));
 
-export const privateRoutes: Route[] = [
-    {
-        path: "/order",
-        component: Home,
-        isPrivate: true,
-        forEmployeeOnly: false,
-    },
-    {
-        path: "/app/order",
-        component: Home,
-        isPrivate: true,
-        forEmployeeOnly: true,
-    }
-];
-
-export const publicRoutes: Route[] = [
+const routes: Route[] = [
     {
         path: "/",
         component: Home,
@@ -37,5 +23,14 @@ export const publicRoutes: Route[] = [
         component: Account,
         isPrivate: false,
         forEmployeeOnly: false,
+    },
+    {
+        path: "/collections/mens-wear",
+        component: Mens,
+        isPrivate: false,
+        forEmployeeOnly: false,
     }
 ];
+
+export const privateRoutes: Route[] = routes.filter(route => route.isPrivate);
+export const publicRoutes: Route[] = routes.filter(route => !route.isPrivate);

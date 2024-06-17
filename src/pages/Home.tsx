@@ -1,12 +1,13 @@
+import { memo } from "react";
 import { BackgroundImage, HomeContainer, ImageContainer, ImageGrid, Image, ParentContainer, H1, FlexContainer, LeftImageContainer, RightContentContainer, LatestDropHeading, ShopButton, QuickAddButton } from "@styles/HomeStyles";
-import backgroundImage from "@assets/images/background.jpg";
-import image1 from "@assets/images/card-image1.jpg";
-import image2 from "@assets/images/card-image2.jpg";
-import image3 from "@assets/images/card-image3.jpg";
-import image4 from "@assets/images/card-image4.jpg";
-import image5 from "@assets/images/card-image5.jpg";
-import image6 from "@assets/images/card-image6.jpg";
-import coverImage from "@assets/images/cover-image.jpg";
+import backgroundImage from "@assets/images/background.webp";
+import image1 from "@assets/images/card-image1.webp";
+import image2 from "@assets/images/card-image2.webp";
+import image3 from "@assets/images/card-image3.webp";
+import image4 from "@assets/images/card-image4.webp";
+import image5 from "@assets/images/card-image5.webp";
+import image6 from "@assets/images/card-image6.webp";
+import coverImage from "@assets/images/cover-image.webp";
 
 const Home = () => {
 
@@ -57,4 +58,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo(Home);

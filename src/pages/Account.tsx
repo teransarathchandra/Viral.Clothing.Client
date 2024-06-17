@@ -1,5 +1,5 @@
-import SignInForm from "@components/common/Forms/SignInForm";
-import SignUpForm from "@components/common/Forms/SignUpForm";
+import SignInForm from "@components/common/Forms/Account/SignInForm";
+import SignUpForm from "@components/common/Forms/Account/SignUpForm";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import fadeInOutAnimation from "src/animations/fadeInOutAnimation";
