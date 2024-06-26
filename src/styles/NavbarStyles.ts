@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconContext, IconBaseProps } from "react-icons";
+import { motion } from "framer-motion";
 
 export const Nav = styled.nav`
   background: #121212;
-  /* background: #fff; */
   padding: 1rem 5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -13,6 +13,10 @@ export const Nav = styled.nav`
   position: fixed;
   z-index: 1;
   width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 1rem 2rem;
+  }
 `;
 
 export const Logo = styled(Link)`
@@ -32,6 +36,10 @@ export const Logo = styled(Link)`
 
 export const NavLinks = styled.div`
   display: flex;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavLink = styled(Link)`
@@ -58,16 +66,43 @@ export const NavLink = styled(Link)`
 export const NavIcons = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
-export const NavIcon = styled(FontAwesomeIcon)`
-  opacity: .8;
-  margin-left: 25px;
-  font-size: 20px;
-  color: #ffffff;
-  cursor: pointer;
+interface NavIconProps extends IconBaseProps {
+  size?: string;
+}
 
-  &:hover {
-    opacity: 1;
+export const NavIcon = styled(IconContext.Provider) <NavIconProps>``;
+
+export const HamburgerIcon = styled.div`
+  display: none;
+  cursor: pointer;
+  color: #ffffff;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+export const MobileNavLinks = styled(motion.div)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+
+  ${NavLink} {
+    margin: 10px 0;
+    font-size: 24px;
   }
 `;
