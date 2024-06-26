@@ -1,9 +1,10 @@
 import { Route } from "@interfaces/Route";
 import { lazy } from "react";
 
-const Home = lazy(() => import("@pages/Home"));
-const Account = lazy(() => import("@pages/Account"));
-const Mens = lazy(() => import("@pages/Mens"));
+const Home = lazy(() => import("@pages/home/Home"));
+const Account = lazy(() => import("@pages/account/Account"));
+const Mens = lazy(() => import("@pages/collection/Mens"));
+const Womens = lazy(() => import("@pages/collection/Womens"));
 
 const routes: Route[] = [
     {
@@ -27,6 +28,12 @@ const routes: Route[] = [
     {
         path: "/collections/mens-wear",
         component: Mens,
+        isPrivate: false,
+        forEmployeeOnly: false,
+    },
+    {
+        path: "/collections/womens-wear",
+        component: Womens,
         isPrivate: false,
         forEmployeeOnly: false,
     }

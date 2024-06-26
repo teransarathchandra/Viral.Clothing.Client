@@ -31,7 +31,7 @@ const Home = () => {
       />
       <FlexContainer>
         <LeftImageContainer>
-          <img alt="Full size" src={coverImage} />
+          <img alt="Full size" loading="lazy" src={coverImage} />
         </LeftImageContainer>
         <RightContentContainer>
           <LatestDropHeading>LATEST DROP</LatestDropHeading>
@@ -48,7 +48,7 @@ const Home = () => {
               viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0, transition: { duration: 0.8, delay: index * 0.2 } }}
             >
-              <Image alt={image.alt} src={image.src} />
+              <Image alt={image.alt} loading="lazy" src={image.src} />
               <QuickAddButton>QUICK ADD</QuickAddButton>
             </ImageContainer>
           ))}

@@ -33,7 +33,7 @@ const Navbar = () => {
       <Logo to="/">VIRAL</Logo>
       <NavLinks>
         <NavLink to="/collections/mens-wear">Men's</NavLink>
-        <NavLink to="/womens">Women's</NavLink>
+        <NavLink to="/collections/womens-wear">Women's</NavLink>
         <NavLink to="/latest">Latest</NavLink>
       </NavLinks>
       <NavLinks>
